@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>         
+            Keyboard Event
+        </title>
+            <script>
+                function HandleOnKeyDown(x)
+                {                   
+                    x.style.color = "Red"
+                    x.style.backgroundColor = "Red"
+                }
+                function HandleOnKeyUp(x)
+                {
+                    x.style.color = "Red"
+                    x.style.backgroundColor = "Yellow"
+                }
+                function HandleOnKeyPress(x)
+                {
+                    x.style.color = "Red"
+                    x.style.backgroundColor = "Blue"
+                }
+            </script>
+    </head>
+    <body>
+        <input type="text"  onkeydown="HandleOnKeyDown(this)" onkeyup="HandleOnKeyUp(this)" onkeypress="HandleOnKeyPress(this)"/>
+    </body>
+</html>

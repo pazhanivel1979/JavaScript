@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Assignment 6 </title>
+	<script>
+        function HandleDelete()
+        {
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p2");
+
+            parent.removeChild(child);
+        }
+
+        function HandleAdd()
+        {
+            var parent = document.getElementById("div1");
+            var child = document.createElement("p");
+            var text = document.createTextNode("Tv - 1200$");
+
+            child.append(text)
+
+
+            parent.appendChild(child);
+        }
+
+	</script>
+</head>
+
+<body>
+    <div id ="div1">
+        <p id = "p1"> Laptop -  1000$ </p>
+        <p id = "p2"> Cellphone -  300$ </p>
+    </div>
+
+    <input type="button" value="Delete" id="button1" onclick="HandleDelete()"/>
+    <input type="button" value="Add" id="button2" onclick="HandleAdd()"/>
+</body>
+
+</html>

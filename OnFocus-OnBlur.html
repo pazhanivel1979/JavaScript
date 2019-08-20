@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>         
+            OnFoucs/Blur
+        </title>
+            <script>
+                function HandleOnFocusEvent(x)
+                {
+                    alert("On Foucs Event" + x.value)
+
+                }
+                function HandleOnblurEvent(x)
+                {
+                    alert("On blur Event" + x.value)
+                }
+            </script>
+    </head>
+    <body>
+        <input type="text" onfocus="HandleOnFocusEvent(this)" onblur="HandleOnblurEvent(this)"/>
+        <input type="button" value="Submit"/>
+    </body>
+</html>

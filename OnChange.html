@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>         
+            On Change
+        </title>
+            <script>
+                function HanldeOnChangeEvent(x)
+                {
+                    document.bgColor = x.value;
+                
+                }
+                function HanldeWebOnChangeEvent(x)
+                {
+                    window.location = x.value
+                }
+                function HanldeImageOnChangeEvent(x)
+                {
+                    document.body.style.backgroundImage = "url('"+ x.value +"')";                
+                }
+            </script>
+    </head>
+    <body>
+        <select onchange="HanldeOnChangeEvent(this)">
+            <option> Select a Color </option>
+            <option value="Red"> Red </option>
+            <option value="Blue"> Blue </option>
+            <option value="Black"> Black </option>
+            <option value="Yellow"> Yellow </option>
+        </select>
+        <br/>
+        <select  onchange="HanldeWebOnChangeEvent(this)">
+                <option> Select a Website </option>
+                <option value="http://www.bharaththippireddy.com"> Bharat </option>
+                <option value="http://www.google.com"> Google </option>                            
+            </select>
+        <br/>
+        <select  onchange="HanldeImageOnChangeEvent(this)">
+                <option> Select a Image </option>
+                <option value="images/Image1.jpg"> Tharshika 1 </option>
+                <option value="images/Image2.jpg">  Tharshika 2 </option>                            
+                <option value="images/Image3.jpg">  Tharshika 3 </option>                            
+        </select>
+            
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>         
+            Events - Mouse Over / Out
+        </title>
+            <script>
+                function HandleMouseUp(x)
+                {
+                    alert('Mouse Up.....')
+                }
+                function HandleMouseDown(x)
+                {
+                    alert('Mouse Down.....')
+                }
+
+                function HandelMouseOverEvent(x)
+                {
+                    x.style.color = "Red"
+
+                } 
+
+                function HandleMouseOutEvent(y)
+                {
+                    y.style.color = "Blue"
+                }
+            </script>
+    </head>
+    <body>
+        <marquee onmouseover="stop()" onmouseout="start()">
+               <b>Start/Stop </b> 
+        </marquee>
+        
+            <H1 onmouseup="HandleMouseUp(this)" onmousedown="HandlemouseDown(this)"> <b> Check  Mouse UP and Down </b></H1>
+            <p onmouseover="HandelMouseOverEvent(this)" onmouseout="HandleMouseOutEvent(this)"> <B></B>hi This Tharshika </B></p>
+    </body>
+</html>

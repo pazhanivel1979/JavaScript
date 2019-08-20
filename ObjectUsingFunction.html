@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Creation of Object using function   </title>
+	<script>
+        function blogpost(title,text)
+        {
+            this.title = title;
+            this.text = text;
+            this.AddAuthor = AddAuthor()
+        }
+
+        function  AddAuthor()
+        {
+            this.Author = "Tharshika AP"
+        }
+        var obj = new blogpost("JQuery","Ease to use with NodeJs")
+        //obj.AddAuthor();
+
+        document.write(obj.title + "<br/>")
+        document.write(obj.text + "<br/>")
+        document.write(obj.Author + "<br/>")
+        
+	</script>
+</head>
+
+<body>
+    
+</body>
+
+</html>

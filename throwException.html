@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title> Error Handling </title>
+	<script>
+        function ValidateAge()
+        {
+            try
+            {
+                var Age = document.getElementById("age").value;
+                
+                if(Age=="")
+                {
+                    throw "Age should not be empty";
+                }
+                if(parseInt(Age)<18)
+                {                    
+                    throw "To young to vote";
+                }
+            }
+            catch(obj)
+            {                
+                document.getElementById("ErrorTag").innerHTML = obj
+                
+            }
+            finally
+            {
+                document.getElementById("FinallyTag").innerHTML = "Finally Tag "
+            }
+
+            
+        }
+	</script>
+</head>
+
+<body>
+    Age : <input type="text" name = "txtAge" id="age"/>  <br/>
+    <input type="button" value="Validate" onclick="ValidateAge()"/>
+
+    <p id="ErrorTag"></p>
+    <p id="FinallyTag"></p>
+</body>
+
+</html>

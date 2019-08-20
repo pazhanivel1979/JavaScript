@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>         
+            Basic Calculater - OnClick Event
+        </title>
+            <script>
+
+                function Calculate(x)
+                {
+                    var z = document.frmcal.txtResult                                    
+                    switch(x.value)
+                    {
+                        case "+":
+                            z.value = parseInt(document.frmcal.txtop1.value)+parseInt(document.frmcal.txtop2.value)
+                            break;
+                        case "-":
+                            z.value = parseInt(document.frmcal.txtop1.value)-parseInt(document.frmcal.txtop2.value)
+                            break;
+                        case "*":
+                            z.value = parseInt(document.frmcal.txtop1.value)*parseInt(document.frmcal.txtop2.value)                            
+                            break;
+                        case "/":
+                            z.value = parseInt(document.frmcal.txtop1.value)/parseInt(document.frmcal.txtop2.value)                            
+                            break;
+                        case "%":
+                            z.value = parseInt(document.frmcal.txtop1.value)%parseInt(document.frmcal.txtop2.value)                            
+                            break;
+                    }
+                    
+                }
+            </script>
+    </head>
+    <body>  
+        <center>
+            <form name="frmcal">            
+                Number 1 : <input type="text" name="txtop1"/> <br/>
+                Number 2 : <input type="text" name="txtop2"/> <br/>
+                Result   : <input type="text" name="txtResult"/> <br/>
+                <br/>
+                <input type="button" name="btnAdd" value="+" onclick="Calculate(this)"/> 
+                <b><input type="button" name="btnMinus" value="-" onclick="Calculate(this)"/> </b>
+                <b><input type="button" name="btnMul" value="*" onclick="Calculate(this)"/> </b>
+                <b><input type="button" name="btnDivide" value="/" onclick="Calculate(this)"/> </b>
+                <b><input type="button" name="btnMod" value="%" onclick="Calculate(this)"/> </b>            
+            </form>
+        </center>      
+    </body>
+</html>

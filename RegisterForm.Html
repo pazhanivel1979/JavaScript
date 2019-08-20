@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>Form Validation </title>
+	<script>
+        function HandleSubmit()
+        {
+            var user = document.frmRegister.txtUser.value;
+            var pwd = document.frmRegister.txtPass.value;
+            var gender = document.frmRegister.gender.value;
+            var chekValue = false;
+
+            if (user=="")
+            {
+                alert("Username should not be empty")
+                document.frmRegister.txtUser.focus()
+                return false;
+            }
+            else if(pwd=="")
+            {
+                alert("Password should not be empty")
+                return false;
+            }
+            else if(gender=="")
+            {
+                alert("Please select..")
+                document.frmRegister.gender.focus();
+                return false;
+            }
+            else if ((document.frmRegister.metro.checked)  || (document.frmRegister.nmetro.checked))
+            {                
+                chekValue = true;
+
+            }
+            else if (chekValue)
+            {
+                var x = document.frmRegister.PaymentMethod.value
+                var radioselected =false
+                for(i=0; i<x.length() ;i++)
+                {
+                    if (x[i].checked)
+                    {
+                        radioselected = true;
+                        break;
+                    }
+                }
+
+                if (radioselected)
+                {
+                    alert("Registration Successfull..")
+                    return true;
+                }
+                else 
+                {
+                    alert("Please Select Altleat One option")
+                    return false;
+
+                }
+            }
+
+            if (!chekValue)
+            {                
+                alert("Please Select Altleat One option")
+                document.frmRegister.metro.focus();
+                return false;
+            }
+
+            if (!radioselected)
+            {                
+                alert("Please Select Altleat One option")
+                document.frmRegister.metro.focus();
+                return false;
+            }
+
+        }
+	</script>
+</head>
+
+<body>
+    <form name="frmRegister" onsubmit="return HandleSubmit()" action="">
+        <p>Username : <input type="text" name="txtUser"/></p>
+        <p>Password : <input type="password" name="txtPass"/></p> 
+        <p>Gender   : <select name="gender">
+            <option value=""> Select Gender</option>
+            <option value="M"> Male</option>
+            <option value="F"> Female</option>
+        </select>                            
+        </p> 
+        <p> <input type="checkbox" value="Metro" name = "metro">Metro </p>
+        <p> <input type="checkbox" value="NonMetro" name= "nmetro">Non-Metro </p>
+        
+        <p> <input type="radio" value="COD" name = "PaymentMethod">Cash on Delivery </p>
+        <p> <input type="radio" value="Credit" name = "PaymentMethod">Credit Card </p>
+        <p> <input type="radio" value="Debit" name = "PaymentMethod">Debit Card </p>
+
+        <br/>
+        <input type="submit" value="Register"/>
+
+
+    </form>
+    
+</body>
+
+</html>

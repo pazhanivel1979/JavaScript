@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>         
+            OnLoad / Redirect
+        </title>
+            <script>
+                function HanldeOnLoad()
+                {
+                    document.location ="http://www.google.com";
+                }
+                function WaitForDelay(x)
+                {
+                     setTimeout(HanldeOnLoad,3000)
+                }
+            </script>
+    </head>
+    <body onload="WaitForDelay(this)">
+        <H1> Redirecting................</H1>
+    </body>
+</html>

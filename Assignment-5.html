@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>         
+            Assignment - 5
+        </title>
+            <script>
+                var Maths = parseInt(prompt("Enter Marks in Maths","100"))
+                var Physics = parseInt(prompt("Enter Marks in Physics","100"))
+                var Chemistry = parseInt(prompt("Enter Marks in Chemistry","100"))
+
+                function calculateGrade(Maths,Physics,Chemistry)
+                {
+                    var avg = (Maths + Physics + Chemistry) / 3
+
+                    if (avg < 60) 
+                    {
+                        return "C"
+                    }
+                    else if ((avg > 70) && (avg < 90))
+                    {
+                        return "B"
+                    }
+                    else if (avg > 90)
+                    {
+                        return "A"
+                    }
+                }
+            </script>
+    </head>
+
+    <body>
+        <script>
+            document.write("Maths : " + Maths + "<br/>")
+            document.write("Physics : " + Physics + "<br/>")
+            document.write("Chemistry : " + Chemistry + "<br/>")
+            var ResultGrade = calculateGrade(Maths,Physics,Chemistry);
+            document.write("The Grade is  : " + ResultGrade + "<br/>")
+        </script>
+
+    </body>
+</html>

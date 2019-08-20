@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Event Listener </title>
+	<script>
+        function HandleClick(x)
+        {
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p1");
+
+            parent.removeChild(child);
+        }
+
+        function HandleCreate(x)
+        {
+            var parent = document.getElementById("div1");
+            var child = document.createElement("p");
+            var text = document.createTextNode("This is New Node");
+
+            child.append(text)
+
+
+            parent.appendChild(child);
+        }
+
+	</script>
+</head>
+
+<body>
+    <div id ="div1">
+        <p id = "p1"> A.P Tharshika </p>
+        <p id="p2"> A.P Tharshika is studying </p>
+    </div>
+
+    <input type="button" value="Remove" id="button1" onclick="HandleClick(this)"/>
+    <input type="button" value="Create" id="button2" onclick="HandleCreate(this)"/>
+</body>
+
+</html>

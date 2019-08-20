@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>         
+            If ladder
+        </title>
+            <script>
+                var j = parseInt(prompt("enter the mark in Java","100"))
+                var js = parseInt(prompt("enter the mark in JavaScript","100"))
+                var _Net = parseInt(prompt("enter the mark in .Net","100"))
+                var Total = 0
+
+
+                if (j >= 35)
+                {
+                    if(js>=35) 
+                    {
+                        if(_Net >= 35)            
+                        {
+                            document.write("<b> The Result is : Pass </b> <br/>" )
+                            Total = (j + js +_Net) / 3 
+                            
+                            if ((Total >= 35) && (Total <=59))
+                                document.write("<b> The Grade is : C </b>" )
+                            else if ((Total >= 60) && (Total <=69))
+                                document.write("<b> The Grade is : B </b>" )
+                            else if ((Total > 69))
+                                document.write("<b> The Grade is : A </b>" )
+                        }
+                    }
+                }
+
+                if (Total == 0)    
+                {
+                    document.write("<b> The Result is : Fail </b> <br/>" )
+                }
+
+            </script>
+    </head>
+</html>
